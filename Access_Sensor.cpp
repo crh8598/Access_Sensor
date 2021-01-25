@@ -4,7 +4,6 @@
 // Author: Julian Oes <julian@oes.ch>
 
 #include "mav_sdk.h"
-#include <sys/socket.h>
 
 using namespace mavsdk;
 using namespace std::this_thread;
@@ -85,19 +84,30 @@ int main(int argc, char** argv)
 
 // start reading mag sensor value
     try {
-        
+        auto latitude = telemetry.position().latitude_deg;
+        auto longitude = telemetry.position().longitude_deg;
         auto deg = telemetry.attitude_euler().yaw_deg;
         auto pre_deg = telemetry.attitude_euler().yaw_deg;
-        float deg_integ = 0.0f;
+        // 현재 이동한 각도를 적분하여 회전방향에 대한 weight를 설정하여 bias를 부가하기위한 변수
+        // 적분을 하는 이유는 노이즈에 의해 시스템이 회전각을 잘못 인지하는 것을 방지하기 위함이다. 시스템을 둔하게 만듬.
+        float deg_integ = 0.0f; 
+
+        // 출력되는 변수의 길이제한
+        std::cout<<fixed;
+        std::cout.precision(6);
         while(telemetry.health().is_magnetometer_calibration_ok)
         {
             
             deg= telemetry.attitude_euler().yaw_deg; 
             if(deg < 0) deg += 360.0f;
+            latitude = telemetry.position().latitude_deg;
+            longitude = telemetry.position().longitude_deg;
 
+            // 회전하는 방향에 따라 bias의 sign 변경. 이는 누적오차가 방향성이 있으므로 이를 제거하기 위함이다.
             if(deg_integ > 0) deg-=bias;
             else  deg+=bias;
-            std::cout<<"\r"<<"deg : "<<deg<<"  , intrg : "<<deg_integ;
+
+            std::cout<<"\r"<<"deg : "<<deg<<"  ,lattitude : "<<latitude<<", longitude : "<<longitude;
             std::this_thread::sleep_for(std::chrono::milliseconds(10));
             deg_integ += deg-pre_deg;
             deg_integ = max(-2.0f,min(2.0f,deg_integ));
