@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o  -o Access_Sensor -Wl,-rpath,/usr/local/lib -lcurses /usr/lib/aarch64-linux-gnu/libform.so /usr/local/lib/libmavsdk_telemetry.so.0.35.1 /usr/local/lib/libmavsdk_action.so.0.35.1 /usr/local/lib/libmavsdk_calibration.so.0.35.1 /usr/local/lib/libmavsdk.so.0.35.1 
