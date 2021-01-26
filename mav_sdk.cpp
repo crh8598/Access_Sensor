@@ -32,13 +32,22 @@ create_calibration_callback(std::promise<void>& calibration_promise)
 }
 void calibrate_magnetometer(Calibration& calibration)
 {
-    std::cout << "Calibrating magnetometer..." << std::endl;
+    std::cout << "Calibrate magnetometer..." << std::endl;
 
     std::promise<void> calibration_promise;
     auto calibration_future = calibration_promise.get_future();
 
     calibration.calibrate_magnetometer_async(create_calibration_callback(calibration_promise));
 
+    calibration_future.wait();
+}
+
+void calibrate_accelerometer(Calibration& calibration)
+{
+    std::cout<<"Calibtrate Accelometer...."<<std::endl;
+    std::promise<void> calibration_promise;
+    auto calibration_future = calibration_promise.get_future();
+    calibration.calibrate_accelerometer_async(create_calibration_callback(calibration_promise));
     calibration_future.wait();
 }
 
@@ -50,13 +59,21 @@ float calc_mag_bias(Telemetry& telemetry,Calibration& calibration,std::string ca
 {
    
     while(!(telemetry.health().is_magnetometer_calibration_ok)){
-        std::cout<<"\r"<<"Start calibrate Sensor";
+        std::cout<<"Start calibrate Magnetometer Sensor"<<std::endl;
         std::this_thread::sleep_for(std::chrono::seconds(5));
         if (calibration_set == "0"){
             calibrate_magnetometer(calibration);
             std::cout<<"calibration finished. px4 be reboot in 10 sec"<<std::endl;
             std::this_thread::sleep_for(std::chrono::seconds(13));
         }
+    }
+
+    if (calibration_set == "2"){
+        std::cout<<"Start calibrate Accelerometer"<<std::endl;        
+        calibrate_accelerometer(calibration);
+        std::cout<<"calibration finished. px4 be reboot in 10 sec"<<std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(10));
+        
     }
     
     float bias = 0;

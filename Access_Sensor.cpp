@@ -4,6 +4,7 @@
 // Author: Julian Oes <julian@oes.ch>
 
 #include "mav_sdk.h"
+#include <stdlib.h>
 
 using namespace mavsdk;
 using namespace std::this_thread;
@@ -22,10 +23,11 @@ int main(int argc, char** argv)
         print_usage(binary_name);
         return 1;
     }
-
+    
+    
     Mavsdk mavsdk;
     std::string connection_url;
-    std::string usb_connection = "serial:///dev/ttyACM0";
+    std::string usb_connection = "serial:///dev/ttyACM1";
 
     ConnectionResult connection_result;
 
@@ -51,10 +53,11 @@ int main(int argc, char** argv)
         }
     });
 
+
     // We usually receive heartbeats at 1Hz, therefore we should find a system after around 2
-    // seconds.
-    sleep_for(seconds(2));
-    std::cout<<(argv[1])<<std::endl;
+    // seconds. use this function for wait the system be ready.
+ 
+    std::this_thread::sleep_for(std::chrono::seconds(5));
 
     if (!discovered_system) {
         std::cout << ERROR_CONSOLE_TEXT << "No system found, exiting." << NORMAL_CONSOLE_TEXT
@@ -72,13 +75,13 @@ int main(int argc, char** argv)
 
     // get bias for yaw drift by average filter 
     float bias = calc_mag_bias(telemetry,calibration,argv[1])+0.1;
-    if(bias == 0) 
+    if(bias == 0.1) 
     {
         telemetry.~Telemetry();
         
         return -1;
     }
-    // bias =0.0f;
+
     // Register a callback so we get told when components (camera, gimbal) etc are found.
     system->register_component_discovered_callback(component_discovered);
 
@@ -91,7 +94,6 @@ int main(int argc, char** argv)
         // 현재 이동한 각도를 적분하여 회전방향에 대한 weight를 설정하여 bias를 부가하기위한 변수
         // 적분을 하는 이유는 노이즈에 의해 시스템이 회전각을 잘못 인지하는 것을 방지하기 위함이다. 시스템을 둔하게 만듬.
         float deg_integ = 0.0f; 
-
         // 출력되는 변수의 길이제한
         std::cout<<fixed;
         std::cout.precision(6);
@@ -117,7 +119,7 @@ int main(int argc, char** argv)
     }        
     catch(std::exception msg){
         std::cout<<msg.what()<<endl;
-        return 0;
+        return -1;
 
     }
 
