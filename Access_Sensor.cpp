@@ -95,7 +95,7 @@ int main(int argc, char** argv)
         // 출력되는 변수의 길이제한
         std::cout<<fixed;
         std::cout.precision(6);
-        while(telemetry.health().is_magnetometer_calibration_ok)
+        while(telemetry.health().is_magnetometer_calibration_ok && getchar_unlocked()!='q')
         {
             
             deg= telemetry.attitude_euler().yaw_deg; 
