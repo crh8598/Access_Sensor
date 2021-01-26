@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/Access_Sensor.cpp" "/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o"
-  "/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.cpp" "/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o"
+  "/home/jetbot/Documents/Access_Sensor/Access_Sensor.cpp" "/home/jetbot/Documents/Access_Sensor/CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o"
+  "/home/jetbot/Documents/Access_Sensor/mav_sdk.cpp" "/home/jetbot/Documents/Access_Sensor/CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

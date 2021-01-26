@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetbot/Documents/MAVSDK/examples/Access_Sensor
+CMAKE_SOURCE_DIR = /home/jetbot/Documents/Access_Sensor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetbot/Documents/MAVSDK/examples/Access_Sensor
+CMAKE_BINARY_DIR = /home/jetbot/Documents/Access_Sensor
 
 #=============================================================================
 # Target rules for target CMakeFiles/Access_Sensor.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/jetbot/Documents/MAVSDK/examples/Access_Sensor
 CMakeFiles/Access_Sensor.dir/all:
 	$(MAKE) -f CMakeFiles/Access_Sensor.dir/build.make CMakeFiles/Access_Sensor.dir/depend
 	$(MAKE) -f CMakeFiles/Access_Sensor.dir/build.make CMakeFiles/Access_Sensor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles --progress-num=1,2,3 "Built target Access_Sensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jetbot/Documents/Access_Sensor/CMakeFiles --progress-num=1,2,3 "Built target Access_Sensor"
 .PHONY : CMakeFiles/Access_Sensor.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/Access_Sensor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Access_Sensor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetbot/Documents/Access_Sensor/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Access_Sensor.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jetbot/Documents/Access_Sensor/CMakeFiles 0
 .PHONY : CMakeFiles/Access_Sensor.dir/rule
 
 # Convenience name for target.

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetbot/Documents/MAVSDK/examples/Access_Sensor
+CMAKE_SOURCE_DIR = /home/jetbot/Documents/Access_Sensor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetbot/Documents/MAVSDK/examples/Access_Sensor
+CMAKE_BINARY_DIR = /home/jetbot/Documents/Access_Sensor
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Access_Sensor.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Access_Sensor.dir/flags.make
 
 CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o: CMakeFiles/Access_Sensor.dir/flags.make
 CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o: Access_Sensor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o -c /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/Access_Sensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetbot/Documents/Access_Sensor/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o -c /home/jetbot/Documents/Access_Sensor/Access_Sensor.cpp
 
 CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/Access_Sensor.cpp > CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetbot/Documents/Access_Sensor/Access_Sensor.cpp > CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.i
 
 CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/Access_Sensor.cpp -o CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetbot/Documents/Access_Sensor/Access_Sensor.cpp -o CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.s
 
 CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/Access_Sensor.dir/Access_Sensor.cpp.o.provides.build: CMakeFiles/Acce
 
 CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o: CMakeFiles/Access_Sensor.dir/flags.make
 CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o: mav_sdk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o -c /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jetbot/Documents/Access_Sensor/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o -c /home/jetbot/Documents/Access_Sensor/mav_sdk.cpp
 
 CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.cpp > CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jetbot/Documents/Access_Sensor/mav_sdk.cpp > CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.i
 
 CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.cpp -o CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jetbot/Documents/Access_Sensor/mav_sdk.cpp -o CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.s
 
 CMakeFiles/Access_Sensor.dir/mav_sdk.cpp.o.requires:
 
@@ -123,7 +123,7 @@ Access_Sensor: /usr/local/lib/libmavsdk_action.so.0.35.1
 Access_Sensor: /usr/local/lib/libmavsdk_calibration.so.0.35.1
 Access_Sensor: /usr/local/lib/libmavsdk.so.0.35.1
 Access_Sensor: CMakeFiles/Access_Sensor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Access_Sensor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jetbot/Documents/Access_Sensor/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Access_Sensor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Access_Sensor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -141,6 +141,6 @@ CMakeFiles/Access_Sensor.dir/clean:
 .PHONY : CMakeFiles/Access_Sensor.dir/clean
 
 CMakeFiles/Access_Sensor.dir/depend:
-	cd /home/jetbot/Documents/MAVSDK/examples/Access_Sensor && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetbot/Documents/MAVSDK/examples/Access_Sensor /home/jetbot/Documents/MAVSDK/examples/Access_Sensor /home/jetbot/Documents/MAVSDK/examples/Access_Sensor /home/jetbot/Documents/MAVSDK/examples/Access_Sensor /home/jetbot/Documents/MAVSDK/examples/Access_Sensor/CMakeFiles/Access_Sensor.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetbot/Documents/Access_Sensor && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetbot/Documents/Access_Sensor /home/jetbot/Documents/Access_Sensor /home/jetbot/Documents/Access_Sensor /home/jetbot/Documents/Access_Sensor /home/jetbot/Documents/Access_Sensor/CMakeFiles/Access_Sensor.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Access_Sensor.dir/depend
 

@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/Access_Sensor.cpp
+/home/jetbot/Documents/Access_Sensor/Access_Sensor.cpp
 mav_sdk.h
-/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.h
-sys/socket.h
+/home/jetbot/Documents/Access_Sensor/mav_sdk.h
+stdlib.h
 -
 
-/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.cpp
+/home/jetbot/Documents/Access_Sensor/mav_sdk.cpp
 mav_sdk.h
-/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.h
+/home/jetbot/Documents/Access_Sensor/mav_sdk.h
 
-/home/jetbot/Documents/MAVSDK/examples/Access_Sensor/mav_sdk.h
+/home/jetbot/Documents/Access_Sensor/mav_sdk.h
 chrono
 -
 future
@@ -38,6 +38,8 @@ thread
 curses.h
 -
 cmath
+-
+stdio.h
 -
 
 /usr/local/include/mavsdk/connection_result.h
