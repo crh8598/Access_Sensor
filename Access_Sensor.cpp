@@ -27,7 +27,7 @@ int main(int argc, char** argv)
     
     Mavsdk mavsdk;
     std::string connection_url;
-    std::string usb_connection = "serial:///dev/ttyACM1";
+    std::string usb_connection = "serial:///dev/ttyACM0";
 
     ConnectionResult connection_result;
 
@@ -97,7 +97,7 @@ int main(int argc, char** argv)
         // 출력되는 변수의 길이제한
         std::cout<<fixed;
         std::cout.precision(6);
-        while(telemetry.health().is_magnetometer_calibration_ok && getchar_unlocked()!='q')
+        while(telemetry.health().is_magnetometer_calibration_ok)
         {
             
             deg= telemetry.attitude_euler().yaw_deg; 
